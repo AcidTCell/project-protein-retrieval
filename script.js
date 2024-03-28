@@ -1,3 +1,22 @@
+let aminoAcidString = prompt('Protein Sequence: ');
+
+
+
+// Split the amino acids by the '.' symbol
+const aminoAcidArray = aminoAcidString.split('.');
+
+// Filter and print elements with length 9 or more
+const resultNineToFourteenInput = aminoAcidArray.filter(sequence => sequence.length >= 9 && sequence.length < 15);
+console.log('Protein')
+console.table(resultNineToFourteenInput);
+
+const resultSixteenUpInput = aminoAcidArray.filter(sequence => sequence.length >= 16);
+console.table(resultSixteenUpInput);
+
+const resultFifteenInput = aminoAcidArray.filter(sequence => sequence.length === 15);
+console.table(resultFifteenInput);
+
+
 const aminoAcidsString = "MMMASKDAPTS.DGASGAGQLVPEANTAEPI.MDPVAGASTAVATAGQVNMIDPWI.NNFVQAPQGEFTISPNNTPGDILFDLQLGPHLNPFL.HLSQMYNGWVGNMRVRILLAGNAFTAGKIIICCVPPGF.A.N.TIAQATLFPHVIADVRTLEPIE.PLEDVRNVLFHNN..N.PTMRLVCMLYTPLRTGG.S.GTD.FVVAGRVLTCPSPDFSFLFLVPP.VEQKTR.FSVPN.PL..LSNSRVP..I..M..SPD..Q.VQFQNGRCT.DGQL.GTTP.SLSQLCKIRG.....S.G.V.NLSELDGSPFHPFESPAPVGFPDLG.CDWH.......Q............T....FVPHLGSI...........GD..G.L.WIS.PS.......N.W.IP.YGSS.TE..HLAP.VYPPGFGE.IVYFMS.FPG.G......VPCLLPQEFI.HF.NEQAP..GEAALLHYVDPDTGRNLGEFKLYPDGF.TCVPN..S.GPQ.LPINGVFVFVSWVSRFYQLKPVGTAS.ARRLG.RR.";
 
 // Split the amino acids by the '.' symbol
