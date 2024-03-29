@@ -1,20 +1,56 @@
-let aminoAcidString = prompt('Protein Sequence: ');
+let container = document.querySelector('#container');
+
+let proteinButton = document.querySelector('#proteinButton');
+
+proteinButton.addEventListener('click', getProteinSequence);
 
 
 
-// Split the amino acids by the '.' symbol
-const aminoAcidArray = aminoAcidString.split('.');
+function getProteinSequence(){
+    clearPage();
+    
+    let aminoAcidString = prompt('Protein Sequence: ');
 
-// Filter and print elements with length 9 or more
-const resultNineToFourteenInput = aminoAcidArray.filter(sequence => sequence.length >= 9 && sequence.length < 15);
-console.log('Protein')
-console.table(resultNineToFourteenInput);
+    // Split the amino acids by the '.' symbol
+    const aminoAcidArray = aminoAcidString.split('.');
 
-const resultSixteenUpInput = aminoAcidArray.filter(sequence => sequence.length >= 16);
-console.table(resultSixteenUpInput);
+    // Filter and print elements with length 9 or more
+    const resultNineToFourteenInput = aminoAcidArray.filter(sequence => sequence.length >= 9 && sequence.length < 15);
+    appendToPage('Protein - Length 9 to 14:');
+    appendTableToPage(resultNineToFourteenInput);
 
-const resultFifteenInput = aminoAcidArray.filter(sequence => sequence.length === 15);
-console.table(resultFifteenInput);
+    const resultSixteenUpInput = aminoAcidArray.filter(sequence => sequence.length >= 16);
+    appendToPage('Protein - Length 16 and Up:');
+    appendTableToPage(resultSixteenUpInput);
+
+    const resultFifteenInput = aminoAcidArray.filter(sequence => sequence.length === 15);
+    appendToPage('Protein - Length 15:');
+    appendTableToPage(resultFifteenInput);
+
+}
+
+function clearPage(){
+    container.innerHTML = '';
+}
+
+function appendToPage(text) {
+    const p = document.createElement('p');
+    p.textContent = text;
+    container.appendChild(p);
+}
+
+function appendTableToPage(data) {
+    const table = document.createElement('table');
+    const headerRow = table.insertRow();
+    const headerCell = headerRow.insertCell();
+    headerCell.textContent = 'Amino Acid Sequence';
+    data.forEach(sequence => {
+        const row = table.insertRow();
+        const cell = row.insertCell();
+        cell.textContent = sequence;
+    });
+    container.appendChild(table);
+}
 
 
 
