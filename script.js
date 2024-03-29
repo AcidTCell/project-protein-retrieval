@@ -35,7 +35,9 @@ function clearPage(){
 
 function appendToPage(text) {
     const p = document.createElement('p');
+    p.classList.add('header');
     p.textContent = text;
+    
     container.appendChild(p);
 }
 
@@ -43,6 +45,7 @@ function appendTableToPage(data) {
     const table = document.createElement('table');
     const headerRow = table.insertRow();
     const headerCell = headerRow.insertCell();
+    headerCell.classList.add('headerCell');
     headerCell.textContent = 'Amino Acid Sequence';
     data.forEach(sequence => {
         const row = table.insertRow();
