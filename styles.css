@@ -21,14 +21,14 @@ body{
 
 #header{
     display: flex;
-    background-color: #023020;
+    background-color: #008080;
 }
 
 
 h1{
     font-family: 'Nunito', sans-serif;
     font-size: 9vh;
-    background-color: #023020;
+    background-color: #008080;
     padding-left: 2vh;
     color: white;
 }
@@ -63,7 +63,7 @@ h1{
 #footer{
     font-family: 'Nunito', sans-serif;
     font-size: 2vh;
-    background-color: #023020;
+    background-color: #008080;
     text-align: center;
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
