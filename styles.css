@@ -21,15 +21,16 @@ body{
 
 #header{
     display: flex;
-    background-color: #40b9c2;
+    background-color: #023020;
 }
 
 
 h1{
     font-family: 'Nunito', sans-serif;
     font-size: 9vh;
-    background-color: #40b9c2;
+    background-color: #023020;
     padding-left: 2vh;
+    color: white;
 }
 
 #proteinButton{
@@ -62,11 +63,12 @@ h1{
 #footer{
     font-family: 'Nunito', sans-serif;
     font-size: 2vh;
-    background-color: #40b9c2;
+    background-color: #023020;
     text-align: center;
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
     font-weight: bold;
+    color: white;
     
 }
 
